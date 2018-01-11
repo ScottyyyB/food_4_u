@@ -13,3 +13,5 @@ Feature:
     Given I visit the "ThaiTanic" page
     Then I should see "ThaiTanic"
     And I should see "Thailands finest food, watch out for the iceburg"
+    And I should see "Menu 1"
+    And I should see "Menu 2"
