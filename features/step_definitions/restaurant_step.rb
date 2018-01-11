@@ -1,13 +1,14 @@
-Given("the following restaurant exists") do |table|
+Given("the following restaurants exists") do |table|
   table.hashes.each do |hash|
     FactoryBot.create(:restaurant, hash)
   end
 end
 
-Given("I visit the {string} page") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Given("I visit the {string} page") do |restaurant|
+  @restaurant = Restaurant.find_by(name: restaurant)
+  visit restaurant_path(@restaurant)
 end
 
-Then("I should see {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should see {string}") do |content|
+  expect(page).to have_content content
 end
