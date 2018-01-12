@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
- resources :restaurants, only: [:show]
+  root controller: :landing, action: :index
+  resources :restaurants, only: [:show]
 
 end
