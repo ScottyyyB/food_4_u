@@ -5,9 +5,10 @@
 <input type='submit' value='Search' class='search-btn' />
 
 <div class='restaurants'>
-  <h2>Restaurants:</h2>
-    <ul>
-      <%= link_to 'ThaiTanic', '#' %><br />
-      <%= link_to 'Fu King Chinese', '#' %>
-    </ul>
+  <h2><%= 'Restaurants:' if @restaurants.any? %></h2>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <%= link_to restaurant.name, restaurant %>
+    <% end %>
+  </ul>
 </div>

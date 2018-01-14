@@ -4,7 +4,13 @@ Feature: Landing Page
   I would like to see a list of restaurants when I visit the landing page
 
   Background:
-    Given I visit the landing page
+    Given the following restaurants exists
+      | name            | description                                      |
+      | ThaiTanic       | Thailands finest food, watch out for the iceburg |
+      | Fu King Chinese | Best chinese food in town                        |
+
+
+    And I visit the landing page
 
   Scenario: Visitor visits landing page
     Then I should see "Welcome to our site!"
@@ -13,3 +19,7 @@ Feature: Landing Page
     Then I should see "What do you feel like tonight?"
     And I should see "ThaiTanic"
     And I should see "Fu King Chinese"
+
+  Scenario: Visitor can navigate to restaurant page
+    When I click "ThaiTanic"
+    Then I should be redirected to the "ThaiTanic" page
