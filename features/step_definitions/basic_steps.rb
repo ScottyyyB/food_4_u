@@ -27,3 +27,15 @@ def page_path_from(page_name)
     when 'thaitanic' then restaurant_path(Restaurant.find_by(name: page_name))
   end
 end
+
+Then("I should be on the {string} page") do |page|
+  sleep(5)
+  case page
+    when 'cart'
+      expect(current_path).to eq cart_path
+  end
+end
+
+Then("I should not see {string}") do |content|
+  expect(page).not_to have_content content
+end
