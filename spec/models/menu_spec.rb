@@ -1,24 +1,22 @@
 require 'rails_helper'
 
-RSpec.describe Restaurant, type: :model do
-  describe 'DB Table' do
+RSpec.describe Menu, type: :model do
+  describe 'DB table' do
     it { is_expected.to have_db_column :id }
     it { is_expected.to have_db_column :name }
-    it { is_expected.to have_db_column :description }
   end
 
   describe 'Validations' do
     it { is_expected.to validate_presence_of :name }
-    it { is_expected.to validate_presence_of :description }
   end
 
   describe 'Relations' do
-    it { is_expected.to have_many :menus }
+    it { is_expected.to belong_to :restaurant }
   end
 
   describe FactoryBot do
     it 'should be valid' do
-      expect(FactoryBot.create(:restaurant)).to be_valid
+      expect(FactoryBot.create(:menu)).to be_valid
     end
   end
 end

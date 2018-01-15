@@ -1,17 +1,31 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
 .search-btn:hover {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  .navbar-brand.abs {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin: 0 auto;
-  }
+.menu {
+  margin: 150px 0;
+  padding: 50px 0;
+}
+
+.navbar {
+  color: black;
+}
+
+#order-icon {
+  position: fixed;
+  right: 0;
+  width: 5%;
 }
 
 .card-footer {
+  margin-top: 100px;
+}
+
+.menu p {
   margin-top: 100px;
 }

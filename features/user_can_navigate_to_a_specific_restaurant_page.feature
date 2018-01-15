@@ -15,5 +15,3 @@ Feature: Visitor can view details about a specific restaurant
     Then I should be redirected to the "ThaiTanic" page
     And I should see "ThaiTanic"
     And I should see "Thailands finest food, watch out for the iceberg"
-    And I should see "Menu 1"
-    And I should see "Menu 2"

@@ -1,9 +1,14 @@
 <h1><%= @restaurant.name %></h1>
 <p><%= @restaurant.description %></p>
 
-<div class='menus'>
+<div id='menu-links'>
   <ul>
-    <%= link_to 'Menu 1', '#' %>
-    <%= link_to 'Menu 2', '#' %>
+    <% @menus.each do |menu| %>
+      <%= link_to menu.name, "#menu-#{menu.id}", class: 'scroll' %>
+    <% end %>
   </ul>
+</div>
+
+<div id='menus'>
+  <%= render @menus %>
 </div>
