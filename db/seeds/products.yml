@@ -1,0 +1,8 @@
+- name: Hawaii
+  price: 5
+
+- name: Napoli
+  price: 10
+
+- name: Sausage
+  price: 8
