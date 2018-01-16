@@ -1,8 +1,5 @@
 class RestaurantsController < ApplicationController
 
-  def index
-  end
-
   def show
     @restaurant = Restaurant.find(params[:id])
     @menus = @restaurant.menus.all
@@ -10,7 +7,7 @@ class RestaurantsController < ApplicationController
 
   def search
     @assortment = params[:assortment]
-    @results = Restaurant.all.select { |restaurant| restaurant.assortment.include? params[:assortment] }
+    @results = Restaurant.all.select { |restaurant| restaurant.assortment.include? @assortment.capitalize }
     render :index
   end
 end
