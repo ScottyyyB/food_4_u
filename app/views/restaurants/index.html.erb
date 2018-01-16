@@ -8,7 +8,7 @@
   <h2><%= 'Restaurants:' if @restaurants.any? %></h2>
   <ul>
     <% @restaurants.each do |restaurant| %>
-      <%= link_to restaurant.name, restaurant %>
+      <%= link_to restaurant.name, restaurant, class: 'restaurant-link' %>
     <% end %>
   </ul>
 </div>

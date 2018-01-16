@@ -1,0 +1,16 @@
+.menu {
+  margin-bottom: 100px;
+  margin: auto;
+  padding: 50px 0;
+  width: 40%;
+  max-width: 500px;
+}
+
+.menu p {
+  margin-top: 20px;
+}
+
+.scroll {
+  font-size: 16px;
+
+}
