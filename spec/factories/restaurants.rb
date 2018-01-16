@@ -2,6 +2,6 @@ FactoryBot.define do
   factory :restaurant do
     name "MyString"
     description "MyText"
-    assortment "Italian"
+    assortment "Thai"
   end
 end

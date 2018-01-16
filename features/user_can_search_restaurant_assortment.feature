@@ -8,10 +8,9 @@ Feature: visitor search for restaurant assortment
       | name            | description                                      | assortment |
       | ThaiTanic       | Thailands finest food, watch out for the iceberg | Thai       |
       | Fu King Chinese | Best chinese food in town                        | Asian      |
-
     And I visit the landing page
 
   Scenario: Visitor can search for restaurants
-    And I fill in "Restaurant Assortment" with "Thai"
+    And I fill in "assortment" with "Thai"
     And I click "Search"
     Then I should see "ThaiTanic"
