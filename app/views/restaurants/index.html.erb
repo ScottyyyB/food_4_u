@@ -1,8 +1,8 @@
-<h1>Welcome to our site!</h1>
-
-<h2>What do you feel like tonight?</h2>
-<input type='string' placeholder='eg. Thai, Italian, Burger'/>
-<input type='submit' value='Search' class='search-btn' />
+<div class='search'>
+  <h1>What do you feel like tonight?</h1>
+  <input type='string' placeholder='eg. Thai, Italian, Mexican' class='form-control' />
+  <input type='submit' value='Search' class='search-btn btn btn-outline-warning' />
+</div>
 
 <div class='restaurants'>
   <h2><%= 'Restaurants:' if @restaurants.any? %></h2>
