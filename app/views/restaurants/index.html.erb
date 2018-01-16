@@ -9,12 +9,11 @@
 
 <% if @results %>
   <div class='restaurants'>
-
     <h2><%= "Results for #{@assortment}" if @results.any? %></h2>
-    <ul>
-      <% @results.each do |restaurant| %>
-        <%= link_to restaurant.name, restaurant %>
-      <% end %>
-    </ul>
+      <ul>
+        <% @results.each do |restaurant| %>
+          <%= link_to restaurant.name, restaurant %>
+        <% end %>
+      </ul>
   </div>
 <% end %>

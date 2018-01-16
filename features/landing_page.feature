@@ -17,9 +17,3 @@ Feature: Landing Page
 
   Scenario: Visitor can search for restaurants
     Then I should see "What do you feel like tonight?"
-    And I should see "ThaiTanic"
-    And I should see "Fu King Chinese"
-
-  Scenario: Visitor can navigate to restaurant page
-    When I click "ThaiTanic"
-    Then I should be redirected to the "ThaiTanic" page
