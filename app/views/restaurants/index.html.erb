@@ -3,7 +3,7 @@
 <h2>What do you feel like tonight?</h2>
 
 <%= form_tag(search_path) do %>
-  <%= text_field_tag :assortment %>
+  <%= text_field_tag :assortment, nil, placeholder: 'eg. Thai, American, Asian' %>
   <%= submit_tag 'Search', class: 'search-btn' %>
 <% end %>
 
