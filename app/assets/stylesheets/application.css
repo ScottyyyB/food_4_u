@@ -3,31 +3,30 @@
  *= require_self
  */
 
- body {
-   text-align: center;
- }
+body {
+  text-align: center;
+}
 
- .search h1 {
+.search h1 {
   margin: 60px 0;
   font-size: 52px;
   letter-spacing: 3px;
   font-family: 'Oswald', sans-serif;
   padding-bottom: 10px;
- }
+}
 
- .search-btn {
-   border: 2px solid rgb(245, 170, 95);
-   font-size: 19px;
-   margin-left: 10px;
- }
+.search-btn {
+  border: 2px solid rgb(245, 170, 95);
+  font-size: 19px;
+  margin-left: 10px;
+}
 
- .form-control {
-   width: 20%;
-   padding: 20px 0;
-   display: inline;
-   padding-left: 10px;
- }
-
+.form-control {
+  width: 20%;
+  padding: 20px 0;
+  display: inline;
+  padding-left: 10px;
+}
 
 .search-btn:hover {
   cursor: pointer;
@@ -39,20 +38,18 @@
   padding: 50px 0;
 }
 
-.navbar {
-  color: black;
-}
-
-#order-icon {
-  position: fixed;
-  right: 0;
-  width: 5%;
-}
-
 .card-footer {
   margin-top: 100px;
 }
 
 .menu p {
   margin-top: 100px;
+}
+
+.glyphicon {
+  color: black;
+}
+
+.pull-right {
+  float: right !important;
 }
