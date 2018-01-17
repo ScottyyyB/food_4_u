@@ -35,3 +35,12 @@ Feature: Visitor can create an account
     And I fill in "Password" with "heythere12"
     And I click 'Sign up'
     Then I should see "1 error prohibited this user from being saved: Password confirmation doesn't match Password"
+
+
+  Scenario: Visitor fills in all fields with invalid Password [Sad Path]
+    And I click "Sign up"
+    When I fill in "Email" with "hotmale@gmail.com"
+    And I fill in "Password" with "hey"
+    And I fill in "Password confirmation" with "hey"
+    And I click "Sign up"
+    Then I should see "1 error prohibited this user from being saved: Password is too short"
