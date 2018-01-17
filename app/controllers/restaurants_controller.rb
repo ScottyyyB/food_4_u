@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
-  def index
 
+  def index
   end
 
   def show
@@ -14,4 +14,5 @@ class RestaurantsController < ApplicationController
     flash[:danger] = 'No restaurants found.' if @results.none?
     render :index
   end
+
 end
