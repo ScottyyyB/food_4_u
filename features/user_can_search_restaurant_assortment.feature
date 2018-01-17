@@ -14,3 +14,8 @@ Feature: visitor search for restaurant assortment
     And I fill in "assortment" with "Thai"
     And I click "Search"
     Then I should see "ThaiTanic"
+
+  Scenario: Visitor input wrong keywords
+    And I fill in "assortment" with "Gandalf"
+    And I click "Search"
+    Then I should see "No restaurants found."

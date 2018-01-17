@@ -1,4 +1,7 @@
 class RestaurantsController < ApplicationController
+  def index
+
+  end
 
   def show
     @restaurant = Restaurant.find(params[:id])
@@ -8,6 +11,7 @@ class RestaurantsController < ApplicationController
   def search
     @assortment = params[:assortment]
     @results = Restaurant.all.select { |restaurant| restaurant.assortment.include? @assortment.capitalize }
+    flash[:danger] = 'No restaurants found.' if @results.none?
     render :index
   end
 end
