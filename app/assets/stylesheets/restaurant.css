@@ -4,6 +4,7 @@
   padding: 50px 0;
   width: 40%;
   max-width: 500px;
+  clear: both;
 }
 
 .menu p {
@@ -18,12 +19,18 @@
 .product-area {
   clear: both;
   padding: 50px 0px;
-  border: 2px solid black;
+}
+
+.product-area span {
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  margin-left: 85px;
+  align: center;
 }
 
 .product-area button {
+  position: relative;
+  bottom: 11px;
   float: right;
-  margin: auto;
-  margin-right: 50px;
-  display: inline;
 }
