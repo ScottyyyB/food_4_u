@@ -30,6 +30,7 @@ def page_path_from(page_name)
   case page_name.downcase
     when 'thaitanic' then restaurant_path(Restaurant.find_by(name: page_name))
     when 'landing' then root_path
+    when 'sign up' then new_user_registration_path
   end
 end
 
