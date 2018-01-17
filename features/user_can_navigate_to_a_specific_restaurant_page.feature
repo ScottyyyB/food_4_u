@@ -9,8 +9,10 @@ Feature: Visitor can view details about a specific restaurant
     | ThaiTanic       | Thailands finest food, watch out for the iceberg |
     | Fu King Chinese | Best chinese food in town                        |
 
-  Scenario: Visitor visits a specific restaurant page
+  Scenario: Visitor navigates to a specific restaurant page
     Given I visit the landing page
+    And I fill in "assortment" with "Thai"
+    And I click "Search"
     When I click "ThaiTanic"
     Then I should be redirected to the "ThaiTanic" page
     And I should see "ThaiTanic"
