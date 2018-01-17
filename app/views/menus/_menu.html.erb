@@ -4,8 +4,10 @@
   <% menu.product_categories.each do |category| %>
     <h4><%= category.name %></h4>
     <% category.products.each do |product| %>
-      <span><%= product.name %> Price: <%= product.price %></span>
-      <button type='button'>Order</button><br />
+      <div class='product-area'>
+        <span><%= product.name %> Price: <%= product.price %></span>
+        <button type='button' class='search-btn btn btn-outline-warning'>Order</button><br />
+      </div>
     <% end %>
   <% end %>
 </div>
