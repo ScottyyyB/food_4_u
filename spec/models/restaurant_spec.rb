@@ -14,6 +14,7 @@ RSpec.describe Restaurant, type: :model do
 
   describe 'Relations' do
     it { is_expected.to have_many :menus }
+    it { is_expected.to have_many :reviews }
   end
 
   describe FactoryBot do
