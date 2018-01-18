@@ -22,6 +22,10 @@ Then("I should be redirected to landing page") do
   expect(current_path).to eq root_path
 end
 
+When("I fill in {string} with {string}") do |string, string2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
 def page_path_from(page_name)
   case page_name.downcase
     when 'thaitanic' then restaurant_path(Restaurant.find_by(name: page_name))
