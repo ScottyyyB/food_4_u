@@ -18,11 +18,17 @@ RSpec.describe Restaurant, type: :model do
     it { is_expected.to validate_presence_of :city }
     it { is_expected.to validate_presence_of :post_code }
     it { is_expected.to validate_presence_of :street_address }
-
   end
 
   describe 'Relations' do
     it { is_expected.to have_many :menus }
+  end
+
+  describe '#full_address' do
+    subject {FactoryBot.create(:restaurant, street_address: "Hantverkargatan 28", post_code: "11220", city: "Stockholm") }
+    it 'sets the full_address using geocoder' do
+      expect(subject.full_address).to eq "Hantverkargatan 28, 112 21 Stockholm, Sweden"
+    end
   end
 
   describe FactoryBot do
