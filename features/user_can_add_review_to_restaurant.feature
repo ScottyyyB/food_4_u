@@ -7,12 +7,15 @@ Feature: Restaurant page reviews
     Given the following user exists
       | email         | password      | password_confirmation |
       | me@gmail.com  | cutie123      | cutie123              |
-    And the following restaurants exist
+    And the following restaurants exists
       | name            | description                                      |
       | ThaiTanic       | Thailands finest food, watch out for the iceberg |
       | Fu King Chinese | Best chinese food in town                        |
-    And I visit the "ThaiTanic" page
+    And I am logged in as "me@gmail.com"
 
   Scenario: User adds review [Happy Path]
-    And I am logged in as "me@gmail.com"
-    
+    And I visit the "ThaiTanic" page
+    When I fill in "Body" with "Great food, but I did not see Leo!"
+    And I click "Add Review"
+    Then I should see "Review has been added successfully."
+    And I should see "Great food, but I did not see Leo!"
