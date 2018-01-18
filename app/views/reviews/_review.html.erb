@@ -1,0 +1,7 @@
+<div class='review'>
+  <span>By: <strong><%= review.user.email %></strong></span>
+  <span><%= time_ago_in_words(review.created_at) %> ago</span>
+  <p>
+    <%= review.body %>
+  </p>
+</div>

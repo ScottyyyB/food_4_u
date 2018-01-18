@@ -17,5 +17,12 @@ Feature: Restaurant page reviews
     And I visit the "ThaiTanic" page
     When I fill in "Body" with "Great food, but I did not see Leo!"
     And I click "Add review"
-    Then I should see "Review has been added successfully."
+    Then I should see "Review has been successfully added."
     And I should see "Great food, but I did not see Leo!"
+
+  Scenario: User adds review when logged out [Sad Path]
+    And I log out
+    And I visit the "ThaiTanic" page
+    When I fill in "Body" with "Great food, but I did not see Leo!"
+    And I click "Add review"
+    Then I should be redirected to the "Login" page

@@ -31,6 +31,7 @@ def page_path_from(page_name)
     when 'thaitanic' then restaurant_path(Restaurant.find_by(name: page_name))
     when 'landing' then root_path
     when 'sign up' then new_user_registration_path
+    when 'login' then new_user_session_path
     when 'cart' then charges_path()
   end
 end
