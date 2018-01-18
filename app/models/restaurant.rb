@@ -1,7 +1,6 @@
 class Restaurant < ApplicationRecord
   has_many :menus
-  validates :name, presence: true
-  validates :description, presence: true
+  validates :name, :description, :street_address, :post_code, :city, presence: true
   geocoded_by :full_address
   after_validation :geocode
 
