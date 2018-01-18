@@ -1,8 +1,15 @@
 - name: ThaiTanic
   description: Thailand's finest food, watch out for the iceberg!
-
+  street_address: Kungsgatan 25
+  post_code: 11156
+  city: Stockholm
 - name: Wok This Way
   description: If you wok this way you probably talk this way too!
-
+  street_address: Hamngatan 1
+  post_code: 11147
+  city: Stockholm
 - name: Pho King Good
   description: Because when you really like your food you have to say it with emphasis!
+  street_address: Hantverksgatan 28
+  post_code: 11221
+  city: Stockholm
