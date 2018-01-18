@@ -7,6 +7,15 @@
             <li class="nav-item active">
                 <%= link_to ' Home', root_path, class: 'glyphicon glyphicon-home' %>
             </li>
+            <% if current_user %>
+              <li class="nav-item active">
+                <span>Logged in as: <strong><%= current_user.email %></strong></span>
+              </li>
+            <% else %>
+              <li class="nav-item active">
+                <%= link_to 'Sign up', new_user_registration_path unless current_page? new_user_registration_path %>
+              </li>
+            <% end %>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
