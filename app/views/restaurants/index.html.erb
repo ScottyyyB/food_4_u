@@ -1,10 +1,10 @@
 <h1>Welcome to our site!</h1>
 
 <h2>What do you feel like tonight?</h2>
-<% form_for do %>
+
   <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Asian' %>
   <%= submit_tag 'Search', class: 'search-btn' %>
-<% end %>
+
 <% if @results %>
   <div class='restaurants'>
     <h2><%= "Results for #{@assortment}" if @results.any? %></h2>

@@ -1,8 +1,10 @@
 class RestaurantsController < ApplicationController
 
   def index
+    binding.pry
+
     if params[:search]
-      @assortment = params[:assortment]
+      @assortment = params[:search]
       @results = Restaurant.all.select { |restaurant| restaurant.assortment.include? @assortment.capitalize }
       flash[:danger] = 'No restaurants found.' if @results.none?
       render :index
