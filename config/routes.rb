@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'reviews/create'
+
   devise_for :users
   get '/cart', to: 'cart#show'
   post '/cart', to: 'cart#create'
   root controller: :restaurants, action: :index
-  resources :restaurants, only: [:show, :index]
+  resources :restaurants, only: [:show, :index] do
+    resources :reviews, only: [:create]
+  end
+  
   resources :orders, only: [:create, :update]
 end

@@ -16,6 +16,6 @@ Feature: Restaurant page reviews
   Scenario: User adds review [Happy Path]
     And I visit the "ThaiTanic" page
     When I fill in "Body" with "Great food, but I did not see Leo!"
-    And I click "Add Review"
+    And I click "Add review"
     Then I should see "Review has been added successfully."
     And I should see "Great food, but I did not see Leo!"
