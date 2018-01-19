@@ -1,21 +1,36 @@
 <h1><%= @restaurant.name %></h1>
 <p><%= @restaurant.description %></p>
 
+
 <div id='menu-links'>
   <ul>
-    <% @menus.each do |menu| %>
+    <% @restaurant.menus.each do |menu| %>
       <%= link_to menu.name, "#menu-#{menu.id}", class: 'scroll' %>
     <% end %>
   </ul>
 </div>
 
 <div id='menus'>
-  <%= render @menus %>
+  <%= render @restaurant.menus %>
 </div>
 
-<div id='reviews'>
-  <%= render @reviews %>
-</div>
+<% if @restaurant.reviews.any? %>
+  <% if @restaurant.reviews.last.errors.any? %>
+    <ul>
+      <% @restaurant.reviews.last.errors.full_messages.each do |msg| %>
+        <li>
+          <%= msg %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+
+<% if !@restaurant.reviews.none? { |review| review.id? } %>
+  <div id='reviews'>
+    <%= render @restaurant.reviews %>
+  </div>
+<% end %>
 
 <%= form_for [@restaurant, @restaurant.reviews.new] do |f| %>
   <%= f.label :body %>

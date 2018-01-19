@@ -27,7 +27,7 @@ Feature: Restaurant page reviews
     And I click "Add review"
     Then I should be redirected to the "Login" page
 
-  Scenario: User submits review without filling in body [Sad Path]
+  Scenario: User adds review [Happy Path]
     And I visit the "ThaiTanic" page
-    When I click "Add review"
-    Then I should see "Body can not be empty."
+    And I click "Add review"
+    Then I should see "Body can't be blank"
