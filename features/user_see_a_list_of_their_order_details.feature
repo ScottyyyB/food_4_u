@@ -1,3 +1,4 @@
+@gmap
 Feature: User adds products to an order
   As a visitor
   In order to buy dishes
@@ -5,23 +6,23 @@ Feature: User adds products to an order
 
   Background:
     Given the following restaurants exists
-      | name            | description                                      |
-      | ThaiTanic       | Thailands finest food, watch out for the iceberg |
+      | name      | description                                      |
+      | ThaiTanic | Thailands finest food, watch out for the iceberg |
 
     And the following menus exist for "ThaiTanic"
-      | name    |
-      | Lunch   |
+      | name  |
+      | Lunch |
 
     And the following product categories exist for "Lunch"
-      | name    |
-      | Pizza   |
+      | name  |
+      | Pizza |
 
     And the following products exist for "Pizza"
-      | name       | price  |
-      | Margherita | 15     |
-      | Hawaii     | 14     |
+      | name       | price |
+      | Margherita | 15    |
+      | Hawaii     | 14    |
 
-    @gmap
+
   Scenario: Visitor can add a selected product to an order
     Given I visit the "ThaiTanic" page
     And I click on "Add to Order" for "Margherita"
@@ -30,7 +31,6 @@ Feature: User adds products to an order
     And An order should have been created in the database
     And "Margherita" should be an order item
 
-    @gmap
   Scenario: Visitor can add a second product to an existing order
     Given I visit the "ThaiTanic" page
     And "Margherita" is already in my order

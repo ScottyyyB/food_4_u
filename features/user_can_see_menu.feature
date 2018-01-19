@@ -9,11 +9,11 @@ Feature: Menus displayed for visitors
       | ThaiTanic       | Thailands finest food, watch out for the iceberg |
       | Fu King Chinese | Best chinese food in town                        |
     And the following menus exist for "ThaiTanic"
-      | name    |
-      | Lunch   |
-      | Dinner  |
+      | name   |
+      | Lunch  |
+      | Dinner |
 
-    @gmap
+  @gmap
   Scenario: Visitor visits landing page
     Given I visit the "ThaiTanic" page
     Then I should see 'Lunch'

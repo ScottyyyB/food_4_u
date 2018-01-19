@@ -1,3 +1,4 @@
+@gmap
 Feature: visitor search for restaurant assortment
   As a visitor
   In order to get suggestion for a restaurant

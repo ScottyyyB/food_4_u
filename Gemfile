@@ -33,7 +33,6 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
-  gem 'stripe-ruby-mock', '~> 2.5', require: 'stripe_mock'
   gem 'webmock'
 end
 
