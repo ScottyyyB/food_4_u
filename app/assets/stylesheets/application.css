@@ -3,29 +3,6 @@
  *= require_self
  */
 
-.search-btn:hover {
-  cursor: pointer;
-}
-
-.menu {
-  margin: 150px 0;
-  padding: 50px 0;
-}
-
-.navbar {
-  color: black;
-}
-
-#order-icon {
-  position: fixed;
-  right: 0;
-  width: 5%;
-}
-
-.card-footer {
-  margin-top: 100px;
-}
-
-.menu p {
-  margin-top: 100px;
-}
+ body {
+   text-align: center;
+ }
