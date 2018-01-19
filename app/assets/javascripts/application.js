@@ -1,4 +1,5 @@
 //=require jquery
+//=require gmaps
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
@@ -12,4 +13,5 @@ $(document).ready(function() {
       scrollTop: $(this.hash).offset().top
     }, 1500);
   });
+  initiateMap()
 });

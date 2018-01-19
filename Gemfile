@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'stripe'
 gem 'geocoder'
 gem 'acts_as_shopping_cart'
+gem 'rails-assets-gmaps', source: 'https://rails-assets.org'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

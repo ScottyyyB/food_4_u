@@ -29,3 +29,8 @@
 .menu p {
   margin-top: 100px;
 }
+
+#map {
+    width: 400px;
+    height: 400px;
+}
