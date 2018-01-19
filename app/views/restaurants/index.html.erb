@@ -1,14 +1,19 @@
-<div class='search'>
-  <h1>What do you feel like tonight?</h1>
-  <input type='string' placeholder='eg. Thai, Italian, Mexican' class='form-control' />
-  <input type='submit' value='Search' class='search-btn btn btn-outline-warning' />
-</div>
+<h1>Welcome to our site!</h1>
 
-<div class='restaurants'>
-  <h2><%= 'Restaurants:' if @restaurants.any? %></h2>
-  <ul>
-    <% @restaurants.each do |restaurant| %>
-      <%= link_to restaurant.name, restaurant, class: 'restaurant-link' %>
-    <% end %>
-  </ul>
-</div>
+<h2>What do you feel like tonight?</h2>
+
+<%= form_tag root_path, method: :get do %>
+  <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Asian' %>
+  <%= submit_tag 'Search', class: 'search-btn' %>
+<% end %>
+
+<% if @results %>
+  <div class='restaurants'>
+    <h2><%= "Results for #{@assortment}" if @results.any? %></h2>
+      <ul>
+        <% @results.each do |restaurant| %>
+          <%= link_to restaurant.name, restaurant %>
+        <% end %>
+      </ul>
+  </div>
+<% end %>
