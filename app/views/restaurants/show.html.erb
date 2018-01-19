@@ -14,23 +14,9 @@
   <%= render @restaurant.menus %>
 </div>
 
-<% if @restaurant.reviews.any? %>
-  <% if @restaurant.reviews.last.errors.any? %>
-    <ul>
-      <% @restaurant.reviews.last.errors.full_messages.each do |msg| %>
-        <li>
-          <%= msg %>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
-<% end %>
-
-<% if !@restaurant.reviews.none? { |review| review.id? } %>
-  <div id='reviews'>
-    <%= render @restaurant.reviews %>
-  </div>
-<% end %>
+<div id='reviews'>
+  <%= render @restaurant.reviews %>
+</div>
 
 <%= form_for [@restaurant, @restaurant.reviews.new] do |f| %>
   <%= f.label :body %>
