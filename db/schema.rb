@@ -58,13 +58,11 @@ ActiveRecord::Schema.define(version: 20180118195504) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
     t.string "street_address"
     t.string "post_code"
     t.string "city"
     t.float "latitude"
     t.float "longitude"
-=======
     t.string "assortment"
   end
 
@@ -76,7 +74,6 @@ ActiveRecord::Schema.define(version: 20180118195504) do
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
->>>>>>> development
   end
 
   create_table "users", force: :cascade do |t|
