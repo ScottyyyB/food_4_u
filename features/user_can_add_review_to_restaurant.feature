@@ -26,3 +26,8 @@ Feature: Restaurant page reviews
     When I fill in "Body" with "Great food, but I did not see Leo!"
     And I click "Add review"
     Then I should be redirected to the "Login" page
+
+  Scenario: User submits review without filling in body [Sad Path]
+    And I visit the "ThaiTanic" page
+    When I click "Add review"
+    Then I should see "Body can not be empty."
