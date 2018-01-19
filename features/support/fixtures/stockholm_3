@@ -1,0 +1,65 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "28",
+               "short_name" : "28",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Hantverkargatan",
+               "short_name" : "Hantverkargatan",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Kungsholmen",
+               "short_name" : "Kungsholmen",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Stockholm",
+               "short_name" : "Stockholm",
+               "types" : [ "postal_town" ]
+            },
+            {
+               "long_name" : "Stockholms län",
+               "short_name" : "Stockholms län",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Sweden",
+               "short_name" : "SE",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "112 21",
+               "short_name" : "112 21",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Hantverkargatan 28, 112 21 Stockholm, Sweden",
+         "geometry" : {
+            "location" : {
+               "lat" : 59.3291795,
+               "lng" : 18.042484
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 59.33052848029151,
+                  "lng" : 18.0438329802915
+               },
+               "southwest" : {
+                  "lat" : 59.32783051970849,
+                  "lng" : 18.04113501970849
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJrfSGY9h3X0YRSVYdOVtRJ88",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}

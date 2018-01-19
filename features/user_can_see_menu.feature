@@ -13,6 +13,7 @@ Feature: Menus displayed for visitors
       | Lunch   |
       | Dinner  |
 
+    @gmap
   Scenario: Visitor visits landing page
     Given I visit the "ThaiTanic" page
     Then I should see 'Lunch'

@@ -12,14 +12,17 @@ Feature: Landing Page
 
     And I visit the landing page
 
+  @gmap
   Scenario: Visitor visits landing page
     Then I should see "Welcome to our site!"
 
+  @gmap
   Scenario: Visitor can search for restaurants
     Then I should see "What do you feel like tonight?"
     And I should see "ThaiTanic"
     And I should see "Fu King Chinese"
 
+  @gmap
   Scenario: Visitor can navigate to restaurant page
     When I click "ThaiTanic"
     Then I should be redirected to the "ThaiTanic" page

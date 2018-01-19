@@ -9,6 +9,7 @@ Feature: Visitor can view details about a specific restaurant
     | ThaiTanic       | Thailands finest food, watch out for the iceberg |
     | Fu King Chinese | Best chinese food in town                        |
 
+    @gmap
   Scenario: Visitor visits a specific restaurant page
     Given I visit the landing page
     When I click "ThaiTanic"

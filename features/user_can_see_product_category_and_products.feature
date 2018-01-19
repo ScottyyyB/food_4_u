@@ -24,6 +24,7 @@ Feature: Products displayed for visitors
       | Margherita | 15     |
       | Hawaii     | 14     |
 
+  @gmap
   Scenario: Visitor can see restaurant content
     Given I visit the "ThaiTanic" page
     Then I should see 'Lunch'

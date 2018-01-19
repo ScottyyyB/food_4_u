@@ -21,6 +21,7 @@ Feature: User adds products to an order
       | Margherita | 15     |
       | Hawaii     | 14     |
 
+    @gmap
   Scenario: Visitor can add a selected product to an order
     Given I visit the "ThaiTanic" page
     And I click on "Add to Order" for "Margherita"
@@ -29,6 +30,7 @@ Feature: User adds products to an order
     And An order should have been created in the database
     And "Margherita" should be an order item
 
+    @gmap
   Scenario: Visitor can add a second product to an existing order
     Given I visit the "ThaiTanic" page
     And "Margherita" is already in my order

@@ -10,7 +10,7 @@ Feature: Selection of restaurants displayed on a map
       | ChinaTown       | Best chinese food in town       | Hamngatan 1       | 11147     | Stockholm     |
       | PizzaPlace      | Very nice pizza                 | Hantverksgatan 28 | 11221     | Stockholm     |
 
-    @javascript
+    @javascript @gmap
     Scenario: Visitor sees restaurants on map
       Given I visit the landing page
       And the map has been loaded
