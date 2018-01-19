@@ -1,16 +1,18 @@
 <div class='menu' id='menu-<%= menu.id %>'>
   <%= link_to 'Back To Top', '#navigation-bar', class: 'scroll' %>
   <h2><%= menu.name %></h2>
-  <h4>Pizza</h4>
-  <span>Margherita</span></br>
-  <span>Napoli</span>
-  <p>
-    Lorem p dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-    mollit anim id est laborum.
-  </p>
+  <% menu.product_categories.each do |category| %>
+      <h4><%= category.name %></h4>
+      <% category.products.each do |product| %>
+          <div id="product-<%= product.id %>">
+            <span><%= product.name %> Price: <%= product.price %></span>
+            <% if session[:order_id] %>
+                <%= button_to 'Add to Order', order_path(session[:order_id]), method: :put, params: {product: product} %>
+            <% else %>
+                <%= button_to 'Add to Order', orders_path, params: {product: product} %>
+            <% end %>
+            <br/>
+          </div>
+      <% end %>
+  <% end %>
 </div>

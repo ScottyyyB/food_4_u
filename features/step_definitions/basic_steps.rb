@@ -22,9 +22,16 @@ Then("I should be redirected to landing page") do
   expect(current_path).to eq root_path
 end
 
+When("I fill in {string} with {string}") do |field, value|
+  fill_in field, with: value
+end
+
 def page_path_from(page_name)
   case page_name.downcase
     when 'thaitanic' then restaurant_path(Restaurant.find_by(name: page_name))
+    when 'landing' then root_path
+    when 'sign up' then new_user_registration_path
+    when 'cart' then charges_path()
   end
 end
 
@@ -32,7 +39,7 @@ Then("I should be on the {string} page") do |page|
   sleep(5)
   case page
     when 'cart'
-      expect(current_path).to eq cart_path
+      expect(current_path).to eq charges_path
   end
 end
 
