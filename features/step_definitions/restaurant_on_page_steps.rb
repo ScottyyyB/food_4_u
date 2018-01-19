@@ -3,6 +3,8 @@ Given("the map has been loaded") do
   expect(page).to have_css '#map .gm-style'
 end
 
-Then("I should see {string} markers") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should see {int} markers") do |int|
+  markers_count = page.evaluate_script('map.markers.length;')
+  expect(markers_count).to eq int.to_i
 end
+

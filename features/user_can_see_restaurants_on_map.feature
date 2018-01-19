@@ -14,4 +14,4 @@ Feature: Selection of restaurants displayed on a map
     Scenario: Visitor sees restaurants on map
       Given I visit the landing page
       And the map has been loaded
-      Then I should see "3" markers
+      Then I should see 3 markers
