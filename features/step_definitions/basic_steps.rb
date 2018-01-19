@@ -26,16 +26,6 @@ When("I fill in {string} with {string}") do |field, value|
   fill_in field, with: value
 end
 
-def page_path_from(page_name)
-  case page_name.downcase
-    when 'thaitanic' then restaurant_path(Restaurant.find_by(name: page_name))
-    when 'landing' then root_path
-    when 'sign up' then new_user_registration_path
-    when 'login' then new_user_session_path
-    when 'cart' then charges_path()
-  end
-end
-
 Then("I should be on the {string} page") do |page|
   sleep(5)
   case page
@@ -46,4 +36,23 @@ end
 
 Then("I should not see {string}") do |content|
   expect(page).not_to have_content content
+end
+
+def page_path_from(page_name)
+  case page_name.downcase
+    when 'thaitanic'
+      restaurant_path(Restaurant.find_by(name: page_name))
+    when 'landing'
+      root_path
+    when 'login'
+      new_user_session_path
+    when 'sign up'
+      new_user_registration_path
+    when 'cart'
+      charges_path
+    when 'checkout'
+      order_path(Order.last)
+    else
+      root_path
+  end
 end
