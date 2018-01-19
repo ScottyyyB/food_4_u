@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :review do
-    user nil
-    restaurant nil
+    association :user
+    association :restaurant
     body "MyText"
   end
 end

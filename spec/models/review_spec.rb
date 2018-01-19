@@ -14,4 +14,10 @@ RSpec.describe Review, type: :model do
     it { is_expected.to belong_to :user }
     it { is_expected.to belong_to :restaurant }
   end
+
+  describe FactoryBot do
+    it 'should be valid' do
+      expect(FactoryBot.create(:review)).to be_valid
+    end
+  end
 end

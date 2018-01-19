@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'reviews/create'
-
   devise_for :users
   get '/cart', to: 'cart#show'
   post '/cart', to: 'cart#create'
@@ -8,6 +6,6 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:show, :index] do
     resources :reviews, only: [:create]
   end
-  
+
   resources :orders, only: [:create, :update]
 end
