@@ -1,9 +1,8 @@
 <div class='review'>
-  <% review.errors.full_messages.each do |msg| %>
-    <%= msg %>
+  <% if review.id? %>
+    <span>By: <strong><%= review.user.email %></strong></span>
+    <span><%= time_ago_in_words(review.created_at) %> ago</span>
   <% end %>
-  <span>By: <strong><%= review.user.email %></strong></span>
-  <span><%= time_ago_in_words(review.created_at) if review.id? %> ago</span>
   <p>
     <%= review.body %>
   </p>
