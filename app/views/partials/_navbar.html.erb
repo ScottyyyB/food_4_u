@@ -23,7 +23,9 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="glyphicon glyphicon-shopping-cart" href="" id=order-icon> Cart</a>
+              <% if session[:order_id] %>
+                <%= link_to 'Checkout', order_path(session[:order_id]), class: 'glyphicon glyphicon-shopping-cart', id: "order-icon" %>
+              <% end %>
             </li>
         </ul>
     </div>

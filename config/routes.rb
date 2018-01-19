@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   post '/cart', to: 'cart#create'
   root controller: :restaurants, action: :index
   resources :restaurants, only: [:show, :index]
-  resources :orders, only: [:create, :update]
+  resources :orders, only: [:show, :create, :update]
 end
