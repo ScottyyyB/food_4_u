@@ -18,6 +18,7 @@ RSpec.describe Restaurant, type: :model do
     it { is_expected.to validate_presence_of :city }
     it { is_expected.to validate_presence_of :post_code }
     it { is_expected.to validate_presence_of :street_address }
+    it { is_expected.to validate_inclusion_of(:assortment).in_array(Restaurant::VALID_ASSORTMENT)}
   end
 
   describe 'Relations' do

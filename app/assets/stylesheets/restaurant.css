@@ -1,0 +1,36 @@
+.menu {
+  margin-bottom: 100px;
+  margin: auto;
+  padding: 50px 0;
+  width: 40%;
+  max-width: 500px;
+  clear: both;
+}
+
+.menu p {
+  margin-top: 20px;
+}
+
+.scroll {
+  font-size: 16px;
+
+}
+
+.product-area {
+  clear: both;
+  padding: 50px 0px;
+}
+
+.product-area span {
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  margin-left: 85px;
+  align: center;
+}
+
+.product-area button {
+  position: relative;
+  bottom: 11px;
+  float: right;
+}

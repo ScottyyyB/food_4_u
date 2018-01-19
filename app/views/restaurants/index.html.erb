@@ -1,21 +1,24 @@
 <h1>Welcome to our site!</h1>
 
 <h2>What do you feel like tonight?</h2>
-<input type='string' placeholder='eg. Thai, Italian, Burger'/>
-<input type='submit' value='Search' class='search-btn' />
 
-<div id="map">
-
-</div>
+<div id="map"></div>
 <script type="text/javascript">
   var restaurants = <%= raw @restaurants.to_json %>
 </script>
 
-<div class='restaurants'>
-  <h2><%= 'Restaurants:' if @restaurants.any? %></h2>
-  <ul>
-    <% @restaurants.each do |restaurant| %>
-      <%= link_to restaurant.name, restaurant %>
-    <% end %>
-  </ul>
-</div>
+<%= form_tag root_path, method: :get do %>
+  <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Asian' %>
+  <%= submit_tag 'Search', class: 'search-btn' %>
+<% end %>
+
+<% if @results %>
+  <div class='restaurants'>
+    <h2><%= "Results for #{@assortment}" if @results.any? %></h2>
+      <ul>
+        <% @results.each do |restaurant| %>
+          <%= link_to restaurant.name, restaurant %>
+        <% end %>
+      </ul>
+  </div>
+<% end %>

@@ -5,5 +5,6 @@ FactoryBot.define do
     street_address "Kungsgatan 25"
     post_code "11156"
     city "Stockholm"
+    assortment "Thai"
   end
 end
