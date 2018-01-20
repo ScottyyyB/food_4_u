@@ -22,6 +22,10 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def index
+
+  end
+
   private
 
   def get_product
