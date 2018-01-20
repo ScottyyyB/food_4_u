@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Ordered Items</h1>
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th>Selected Dishes</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @order.order_items.each do |product| %>
+    <tr>
+      <td scope="row"><%="#{product.item.name}: "%></td>
+      <td><%=product.quantity%></td>
+      <td><%=" #{product.item.price} kr"%></td>
+    </tr>
+    <% end %>
+    <tr>
+      <td scope="row">Subtotal:</td>
+      <td></td>
+      <td><%= @order.subtotal %> kr</td>
+    </tr>
+    <tr>
+      <td scope="row">Delivery fee:</td>
+      <td></td>
+      <td><%= @order.shipping_cost %> kr</td>
+    </tr>
+    <tr>
+      <td scope="row">Total:</td>
+      <td></td>
+      <td><%= @order.total %> kr</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

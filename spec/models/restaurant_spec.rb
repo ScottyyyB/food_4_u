@@ -10,6 +10,7 @@ RSpec.describe Restaurant, type: :model do
   describe 'Validations' do
     it { is_expected.to validate_presence_of :name }
     it { is_expected.to validate_presence_of :description }
+    it { is_expected.to validate_inclusion_of(:assortment).in_array(Restaurant::VALID_ASSORTMENT)}
   end
 
   describe 'Relations' do

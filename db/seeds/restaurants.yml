@@ -1,8 +1,11 @@
 - name: ThaiTanic
   description: Thailand's finest food, watch out for the iceberg!
+  assortment: Thai
 
 - name: Wok This Way
   description: If you wok this way you probably talk this way too!
+  assortment: Asian
 
 - name: Pho King Good
   description: Because when you really like your food you have to say it with emphasis!
+  assortment: American
