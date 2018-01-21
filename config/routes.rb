@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+ # get 'charges/new'
+
+ # get 'charges/create'
+
   devise_for :users
   root controller: :restaurants, action: :index
   resources :restaurants, only: [:show, :index]
-  resources :orders, only: [:show, :create, :update, :index]
+  resources :orders, only: [:show, :create, :update]
+  resources :charges, only: [:new, :create]
   get '/order', to: 'order#show'
 end

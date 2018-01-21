@@ -46,7 +46,7 @@ def page_path_from(page_name)
     when 'checkout'
       order_path(Order.last)
     when 'confirmation'
-      orders_path
+      new_charge_path
     else
       root_path
   end
