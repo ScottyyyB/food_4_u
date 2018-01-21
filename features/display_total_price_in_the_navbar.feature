@@ -17,13 +17,13 @@ Feature: Visitor can see total price in the navbar
       | Pizza   |
 
     And the following products exist for "Pizza"
-      | name       | price  |
-      | Margherita | 15     |
-      | Hawaii     | 14     |
+      | name       | price     |
+      | Margherita | 15        |
+      | Hawaii     | 14        |
 
     Scenario: Visitor can add a selected product to an order
       Given I visit the "ThaiTanic" page
       When I click on "Add to Order" for "Margherita"
-      Then I should see 15 in the navbar
+      Then I should see 16.24 in the navbar
       And I click on "Add to Order" for "Hawaii"
-      Then I should see 24 in the navbar
+      Then I should see 31.39 in the navbar
