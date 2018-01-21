@@ -28,3 +28,7 @@ And(/^"([^"]*)" is already in my order$/) do |product_name|
    And I should be on the restaurant "ThaiTanic" page
         }
 end
+
+Then("I should see {int} in the navbar") do |int|
+
+end
