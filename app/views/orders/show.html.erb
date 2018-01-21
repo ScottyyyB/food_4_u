@@ -39,6 +39,6 @@
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= ENV['PUBLISHABLE_KEY'] %>"
     data-description="Payment for order"
-    data-amount="<%= @order.total %>"
+    data-amount="<%= @order.total * 100 %>"
     data-locale="auto"></script>
 <% end %>

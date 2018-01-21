@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:show, :index]
   resources :orders, only: [:show, :create, :update]
   resources :charges, only: [:new, :create]
-  get '/order', to: 'order#show'
 end
