@@ -44,6 +44,8 @@ def page_path_from(page_name)
       restaurant_path(Restaurant.find_by(name: page_name))
     when 'landing'
       root_path
+    when 'login'
+      new_user_session_path
     when 'sign up'
       new_user_registration_path
     when 'cart'

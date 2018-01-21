@@ -33,6 +33,16 @@ Given("the following products exist for {string}") do |product_category, table|
   end
 end
 
+Given("the following reviews exist for user {string} and restaurant {string}") do |user, restaurant, table|
+  user = User.find_by(email: user)
+  restaurant = Restaurant.find_by(name: restaurant)
+  table.hashes.each do |hash|
+    hash[:user] = user
+    hash[:restaurant] = restaurant
+    review = FactoryBot.create(:review, hash)
+  end
+end
+
 Then("show me the page") do
   save_and_open_page
 end
