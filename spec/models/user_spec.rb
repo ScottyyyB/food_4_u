@@ -26,6 +26,10 @@ RSpec.describe User, type: :model do
     it { is_expected.not_to allow_value('hey@').for :email }
   end
 
+  describe 'Relations' do
+    it { is_expected.to have_many :reviews }
+  end
+
   describe FactoryBot do
     it 'should be valid' do
       expect(FactoryBot.create(:user)).to be_valid
