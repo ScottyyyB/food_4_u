@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
- # get 'charges/new'
-
- # get 'charges/create'
-
   devise_for :users
   root controller: :restaurants, action: :index
   resources :restaurants, only: [:show, :index]

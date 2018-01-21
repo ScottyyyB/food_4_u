@@ -1,6 +1,13 @@
-Given("I visit the checkout page") do
-  binding.pry
-  @order = Order.create
+Given("the following order items exist in an order:") do |table|
+  table.hashes.each do |product|
+    steps %Q{
+      And "#{product[:name]}" is already in my order
+    }
+  end
+end
+
+And("I visit the checkout page") do
+  @order = Order.last
   visit order_path(@order)
 end
 
