@@ -27,6 +27,7 @@ Feature: A User can pay for their order using stripe
     Given the following order items exist in an order:
       | name       |
       | Margherita |
+      | Hawaii     |
 
     And I visit the checkout page
 
