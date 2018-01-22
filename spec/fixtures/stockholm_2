@@ -1,0 +1,65 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "1",
+               "short_name" : "1",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Hamngatan",
+               "short_name" : "Hamngatan",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Norrmalm",
+               "short_name" : "Norrmalm",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Stockholm",
+               "short_name" : "Stockholm",
+               "types" : [ "postal_town" ]
+            },
+            {
+               "long_name" : "Stockholms län",
+               "short_name" : "Stockholms län",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Sweden",
+               "short_name" : "SE",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "111 47",
+               "short_name" : "111 47",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Hamngatan 1, 111 47 Stockholm, Sweden",
+         "geometry" : {
+            "location" : {
+               "lat" : 59.3329903,
+               "lng" : 18.0752529
+            },
+            "location_type" : "RANGE_INTERPOLATED",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 59.3343392802915,
+                  "lng" : 18.0766018802915
+               },
+               "southwest" : {
+                  "lat" : 59.33164131970849,
+                  "lng" : 18.0739039197085
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "EiZIYW1uZ2F0YW4gMSwgMTExIDQ3IFN0b2NraG9sbSwgU3ZlcmlnZQ",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}

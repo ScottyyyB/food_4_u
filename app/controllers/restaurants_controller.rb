@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
   def index
+    @restaurants = Restaurant.all
     if params[:search]
       @assortment = params[:search]
       @results = Restaurant.all.select do |restaurant|

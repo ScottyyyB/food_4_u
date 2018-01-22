@@ -1,3 +1,4 @@
+@gmap
 Feature: Restaurant page reviews
   As a user
   In order to select the best restaurant and also express my opinion

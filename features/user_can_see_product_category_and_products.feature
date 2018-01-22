@@ -10,9 +10,9 @@ Feature: Products displayed for visitors
       | Fu King Chinese | Best chinese food in town                        |
 
     And the following menus exist for "ThaiTanic"
-      | name    |
-      | Lunch   |
-      | Dinner  |
+      | name   |
+      | Lunch  |
+      | Dinner |
 
     And the following product categories exist for "Lunch"
       | name    |
@@ -20,10 +20,11 @@ Feature: Products displayed for visitors
       | Noodles |
 
     And the following products exist for "Pizza"
-      | name       | price  |
-      | Margherita | 15     |
-      | Hawaii     | 14     |
+      | name       | price |
+      | Margherita | 15    |
+      | Hawaii     | 14    |
 
+  @gmap
   Scenario: Visitor can see restaurant content
     Given I visit the "ThaiTanic" page
     Then I should see 'Lunch'

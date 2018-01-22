@@ -1,4 +1,4 @@
-@javascript
+@gmap @javascript
 Feature: A User can pay for their order using stripe
   As a visitor
   In order to pay for my ordered products

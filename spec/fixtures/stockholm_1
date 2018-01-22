@@ -1,0 +1,64 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "25",
+               "short_name" : "25",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Kungsgatan",
+               "short_name" : "Kungsgatan",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Norrmalm",
+               "short_name" : "Norrmalm",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Stockholm",
+               "short_name" : "Stockholm",
+               "types" : [ "postal_town" ]
+            },
+            {
+               "long_name" : "Stockholms län",
+               "short_name" : "Stockholms län",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Sweden",
+               "short_name" : "SE",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "111 56",
+               "short_name" : "111 56",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Kungsgatan 25, 111 56 Stockholm, Sweden",
+         "geometry" : {
+            "location" : {
+               "lat" : 59.3357624,
+               "lng" : 18.0673402
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 59.3371113802915,
+                  "lng" : 18.0686891802915
+               },
+               "southwest" : {
+                  "lat" : 59.3344134197085,
+                  "lng" : 18.0659912197085
+               }
+            }
+         },
+         "place_id" : "ChIJxWIaBl2dX0YRFFMAtcvB3zs",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}

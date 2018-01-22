@@ -1,3 +1,4 @@
+@gmap
 Feature: Visitor can see total price in the navbar
   As a visitor
   In order to keep track of the total amount of my order
