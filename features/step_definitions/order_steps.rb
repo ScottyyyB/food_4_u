@@ -24,7 +24,7 @@ end
 And(/^"([^"]*)" is already in my order$/) do |product_name|
   steps %Q{
    And I click on "Add to Order" for "#{product_name}"
-   Then I should see "Margherita has been added to your order"
+   Then I should see "#{product_name} has been added to your order"
    And I should be on the restaurant "ThaiTanic" page
         }
 end
