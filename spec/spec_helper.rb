@@ -2,19 +2,24 @@ require 'webmock/rspec'
 WebMock.disable_net_connect!(allow_localhost: true)
 require 'coveralls'
 Coveralls.wear_merged!('rails')
-RSpec.configure do |config|
-  #fixtures_path = "#{::Rails.root}/features/support/fixtures"
 
-  stockholm_3 = stub_request(:get, "https://maps.googleapis.com/maps/api/geocode/json?address=Hantverkargatan%2028,11220,Stockholm&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false")
+RSpec.configure do |config|
   config.before(:each) do
-    stub_request(:get, "https://maps.googleapis.com/maps/api/geocode/json?address=Hantverkargatan%2028,11220,Stockholm&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false").
-        with(  headers: {
-            'Accept'=>'*/*',
-            'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-            'User-Agent'=>'Ruby'
-        }).
-        to_return(status: 200, body: stockholm_3, headers: {})
+    fixtures_path = "#{::Rails.root}/spec/fixtures"
+
+    stockholm_3 = File.open("#{fixtures_path}/stockholm_3").read
+
+    File.readlines("#{fixtures_path}/stockholm_urls.txt").map(&:chomp).each do |url|
+      stub_request(:get, url)
+          .with(headers: {
+              'Accept' => '*/*',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'User-Agent' => 'Ruby'
+          })
+          .to_return(status: 200, body: stockholm_3, headers: {})
+    end
   end
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
@@ -24,5 +29,4 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
-
 end

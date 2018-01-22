@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Restaurant, type: :model do
+  #before(:each) do
+  subject {FactoryBot.create(:restaurant, street_address: "Hantverkargatan 28", post_code: "11220", city: "Stockholm") }
+  #end
   describe 'DB Table' do
     it { is_expected.to have_db_column :id }
     it { is_expected.to have_db_column :name }
@@ -26,7 +29,6 @@ RSpec.describe Restaurant, type: :model do
   end
 
   describe '#full_address' do
-    subject {FactoryBot.create(:restaurant, street_address: "Hantverkargatan 28", post_code: "11220", city: "Stockholm") }
     it 'sets the full_address using geocoder' do
       expect(subject.full_address).to eq "Hantverkargatan 28, 112 21 Stockholm, Sweden"
     end

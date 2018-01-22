@@ -1,0 +1,6 @@
+https://maps.googleapis.com/maps/api/geocode/json?address=Hantverkargatan%2028,11220,Stockholm&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false
+https://maps.googleapis.com/maps/api/geocode/json?address=Hantverkargatan%2028,%20112%2021%20Stockholm,%20Sweden&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false
+https://maps.googleapis.com/maps/api/geocode/json?address=Hantverkargatan%2028,11220,&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false
+https://maps.googleapis.com/maps/api/geocode/json?address=Kungsgatan%2025,11156,Stockholm&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false
+https://maps.googleapis.com/maps/api/geocode/json?address=,11220,Stockholm&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false
+https://maps.googleapis.com/maps/api/geocode/json?address=Hantverkargatan%2028,,Stockholm&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false

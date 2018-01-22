@@ -21,6 +21,7 @@ Feature: Visitor can go to the order page to see a list of ordered products and 
       | Margherita | 15     |
       | Hawaii     | 14     |
 
+    @gmap
   Scenario: Visitor can access order page to see a list of the ordered products and total price
     Given I visit the "ThaiTanic" page
     And I click on "Add to Order" for "Margherita"
