@@ -26,12 +26,9 @@ When("I fill in {string} with {string}") do |field, value|
   fill_in field, with: value
 end
 
-Then("I should be on the {string} page") do |page|
+Then("I should be on the {string} page") do |page_name|
   sleep(5)
-  case page
-    when 'cart'
-      expect(current_path).to eq charges_path
-  end
+    expect(current_path).to eq page_path_from(page_name)
 end
 
 Then("I should not see {string}") do |content|
@@ -44,12 +41,14 @@ def page_path_from(page_name)
       restaurant_path(Restaurant.find_by(name: page_name))
     when 'landing'
       root_path
+    when 'login'
+      new_user_session_path
     when 'sign up'
       new_user_registration_path
-    when 'cart'
-      charges_path
     when 'checkout'
       order_path(Order.last)
+    when 'confirmation'
+      new_charge_path
     else
       root_path
   end

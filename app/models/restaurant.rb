@@ -11,4 +11,5 @@ class Restaurant < ApplicationRecord
                       self.post_code,
                       self.city].join(','))
   end
+  has_many :reviews
 end
