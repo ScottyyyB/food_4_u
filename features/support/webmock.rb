@@ -2,7 +2,7 @@ require 'webmock/cucumber'
 WebMock.disable_net_connect!(allow_localhost: true)
 
 Before ('@gmap') do
-  fixtures_path = "#{::Rails.root}/features/support/fixtures"
+  fixtures_path = "#{::Rails.root}/spec/fixtures"
 
   stockholm_1 = File.open("#{fixtures_path}/stockholm_1").read
   stockholm_2 = File.open("#{fixtures_path}/stockholm_2").read
