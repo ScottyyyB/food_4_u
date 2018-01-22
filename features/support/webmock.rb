@@ -31,7 +31,4 @@ Before ('@gmap') do
   stub_request(:get, "https://maps.googleapis.com/maps/api/geocode/json?address=Hantverkargatan%2028,%20112%2021%20Stockholm,%20Sweden&key=AIzaSyCHgPt-pc3Mt8xSRhj94gV6Ge1X9zJpvzg&language=en&sensor=false").
       with(headers: {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
       to_return(status: 200, body: stockholm_3, headers: {})
-
-
-
 end

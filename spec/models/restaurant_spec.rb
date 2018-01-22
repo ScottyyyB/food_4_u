@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Restaurant, type: :model do
-  #before(:each) do
   subject {FactoryBot.create(:restaurant, street_address: "Hantverkargatan 28", post_code: "11220", city: "Stockholm") }
-  #end
+
   describe 'DB Table' do
     it { is_expected.to have_db_column :id }
     it { is_expected.to have_db_column :name }

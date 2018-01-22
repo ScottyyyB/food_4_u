@@ -5,23 +5,23 @@ Feature: Visitor can go to the order page to see a list of ordered products and 
 
   Background:
     Given the following restaurants exists
-      | name            | description                                      |
-      | ThaiTanic       | Thailands finest food, watch out for the iceberg |
+      | name      | description                                      |
+      | ThaiTanic | Thailands finest food, watch out for the iceberg |
 
     And the following menus exist for "ThaiTanic"
-      | name    |
-      | Lunch   |
+      | name  |
+      | Lunch |
 
     And the following product categories exist for "Lunch"
-      | name    |
-      | Pizza   |
+      | name  |
+      | Pizza |
 
     And the following products exist for "Pizza"
-      | name       | price  |
-      | Margherita | 15     |
-      | Hawaii     | 14     |
+      | name       | price |
+      | Margherita | 15    |
+      | Hawaii     | 14    |
 
-    @gmap
+  @gmap
   Scenario: Visitor can access order page to see a list of the ordered products and total price
     Given I visit the "ThaiTanic" page
     And I click on "Add to Order" for "Margherita"
