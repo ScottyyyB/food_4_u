@@ -1,0 +1,4 @@
+{"data"=>
+  [{"id"=>"#{Restaurant.first.id}", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}},
+   {"id"=>"#{Restaurant.second.id}", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}},
+   {"id"=>"#{Restaurant.third.id}", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}}]}
