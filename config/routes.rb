@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   end
   resources :orders, only: [:show, :create, :update]
   resources :charges, only: [:new, :create]
+  namespace :api do
+    namespace :v0 do
+      resources :ping, only: [:index], constraints: { format: 'json' }
+    end
+  end
 end
