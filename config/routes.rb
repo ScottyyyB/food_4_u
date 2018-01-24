@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       resources :ping, only: [:index], constraints: { format: 'json' }
     end
     namespace :v1 do
-      resources :restaurants, only: [:index]
+      resources :restaurants, only: [:index, :show]
     end
   end
 end
