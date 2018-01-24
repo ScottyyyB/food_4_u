@@ -1,4 +1,4 @@
 {"data"=>
-  [{"id"=>"46", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}},
-   {"id"=>"47", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}},
-   {"id"=>"48", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}}]}
+  [{"id"=>"#{Restaurant.first.id}", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}},
+   {"id"=>"#{Restaurant.second.id}", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}},
+   {"id"=>"#{Restaurant.third.id}", "type"=>"restaurants", "attributes"=>{"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}}]}
