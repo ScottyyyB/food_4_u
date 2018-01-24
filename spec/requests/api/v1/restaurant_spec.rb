@@ -11,7 +11,6 @@ RSpec.describe Api::V1::RestaurantsController, type: :request do
     it 'should return a restaurant' do
       get '/api/v1/restaurants'
       expect(response.status).to eq 200
-      #binding.pry
       expected_response = eval(file_fixture('restaurants.txt').read)
       expect(response_json).to eq expected_response.as_json
     end
