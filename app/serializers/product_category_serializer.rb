@@ -5,7 +5,7 @@ class ProductCategorySerializer < ActiveModel::Serializer
 
   def products
     object.products.map do |product|
-      ProductSerializer.new(product).as_json
+      ProductSerializer.new(product)
     end
   end
 end

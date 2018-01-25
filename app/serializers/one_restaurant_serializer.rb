@@ -4,7 +4,7 @@ class OneRestaurantSerializer < ActiveModel::Serializer
 
   def menus
     object.menus.map do |menu|
-      MenuSerializer.new(menu).as_json
+      MenuSerializer.new(menu)
     end
   end
 end
