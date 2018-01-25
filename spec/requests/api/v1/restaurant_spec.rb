@@ -5,6 +5,7 @@ RSpec.describe Api::V1::RestaurantsController, type: :request do
     3.times {FactoryBot.create( :restaurant )}
     3.times {FactoryBot.create( :menu, restaurant: Restaurant.first )}
     3.times {FactoryBot.create( :product_category, menu: Menu.first )}
+    3.times {FactoryBot.create( :product, product_category: ProductCategory.first )}
   end
 
   describe 'GET /v1/restaurants' do
