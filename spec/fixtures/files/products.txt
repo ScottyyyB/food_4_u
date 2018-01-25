@@ -1,0 +1,29 @@
+{"data"=>
+  {"id"=>"#{Restaurant.first.id}",
+   "type"=>"restaurants",
+   "attributes"=>
+    {"name"=>"MyString",
+     "description"=>"MyText",
+     "assortment"=>"Thai",
+     "menus"=>
+      [{"name"=>"MyName",
+        "product_categories"=>
+         [{"name"=>"MyString",
+           "products"=>
+            [{"name"=>"MyString", "price"=>1.5},
+             {"name"=>"MyString", "price"=>1.5},
+             {"name"=>"MyString", "price"=>1.5}]},
+          {"name"=>"MyString", "products"=>[]},
+          {"name"=>"MyString", "products"=>[]}],
+        "restaurant"=>
+         {"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}},
+       {"name"=>"MyName",
+        "product_categories"=>[],
+        "restaurant"=>
+         {"name"=>"MyString", "description"=>"MyText", "assortment"=>"Thai"}},
+       {"name"=>"MyName",
+        "product_categories"=>[],
+        "restaurant"=>
+         {"name"=>"MyString",
+          "description"=>"MyText",
+          "assortment"=>"Thai"}}]}}}
