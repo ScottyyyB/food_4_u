@@ -15,9 +15,8 @@ RSpec.describe Api::V1::OrdersController, type: :request do
       post '/api/v1/orders', params: {
         product: Product.first.id
       }, headers: headers
-      binding.pry
       expect(response.status).to eq 200
-      expected_response = eval(file_fixture('order.txt').read)
+      expected_response = eval(file_fixture('current_order.txt').read)
       expect(response_json).to eq expected_response.as_json
     end
   end
