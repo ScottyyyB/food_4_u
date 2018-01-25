@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      get 'orders_controller/create'
+    end
+  end
+
   devise_for :users
   root controller: :restaurants, action: :index
   resources :restaurants, only: [:show, :index] do
@@ -12,6 +18,7 @@ Rails.application.routes.draw do
     end
     namespace :v1 do
       resources :restaurants, only: [:index]
+      resources :orders, only: [:create]
     end
   end
 end
