@@ -8,4 +8,3 @@ class OneRestaurantSerializer < ActiveModel::Serializer
     end
   end
 end
-
