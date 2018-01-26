@@ -1,0 +1,6 @@
+{"data"=>
+  {"id"=>"#{Order.last.id}",
+   "type"=>"orders",
+   "attributes"=>
+    {"order-items"=>
+      [{"id"=>OrderItem.last.id, "quantity"=>1, "price_cents"=>150, "price_currency"=>"USD", "item"=>{"name"=>"MyString", "price"=>1.5}}]}}}

@@ -32,4 +32,13 @@ RSpec.describe Api::V1::OrdersController, type: :request do
       expect(response_json).to eq expected_response.as_json
     end
   end
+
+  describe 'GET /v1/orders/order_id' do
+    it 'should return an order' do
+      get "/api/v1/orders/#{Order.last.id}"
+      expect(response.status).to eq 200
+      expected_response = eval(file_fixture('show_order.txt').read)
+      expect(response_json).to eq expected_response.as_json
+    end
+  end
 end

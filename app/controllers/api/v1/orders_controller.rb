@@ -1,5 +1,5 @@
 class Api::V1::OrdersController < ApplicationController
-  before_action :get_product
+  before_action :get_product, except: [:show]
 
   def create
     order = Order.create
@@ -13,6 +13,11 @@ class Api::V1::OrdersController < ApplicationController
     if order.persisted?
       render json: { message: "#{@product.name} has been added to the order." }
     end
+  end
+
+  def show
+    order = Order.find(params[:id])
+    render json: order, serializer: OneOrderSerializer
   end
 
   private
