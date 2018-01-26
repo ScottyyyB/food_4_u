@@ -1,1 +1,1 @@
-{"order"=>Order.last.id}
+{"data"=>{"id"=>"#{Order.last.id}", "type"=>"orders"}}

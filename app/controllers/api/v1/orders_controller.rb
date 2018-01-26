@@ -5,8 +5,7 @@ class Api::V1::OrdersController < ApplicationController
     order = Order.create
     order.add(@product, @product.price)
     if order.persisted?
-      session[:order_id] = order.id
-      render json: { order: session[:order_id] }
+      render json: order, serializer: OrderSerializer
     end
   end
 
