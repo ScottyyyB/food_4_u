@@ -9,6 +9,14 @@ class Api::V1::OrdersController < ApplicationController
     end
   end
 
+  def update
+    order = Order.find(params[:id])
+    order.add(@product, @product.price)
+    if order.persisted?
+      render json: order, serializer: 
+    end
+  end
+
   private
 
   def get_product
