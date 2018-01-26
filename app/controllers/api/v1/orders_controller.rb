@@ -4,9 +4,7 @@ class Api::V1::OrdersController < ApplicationController
   def create
     order = Order.create
     order.add(@product, @product.price)
-    if order.persisted?
-      render json: order, serializer: OrderSerializer
-    end
+    render json: order, serializer: OrderSerializer if order.persisted?
   end
 
   def update
