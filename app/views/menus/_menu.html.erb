@@ -4,7 +4,6 @@
   <% menu.product_categories.each do |category| %>
       <h4><%= category.name %></h4>
       <% category.products.each do |product| %>
-          <% binding.pry %>
           <div id="product-<%= product.id %>">
             <span><%= product.name %> Price: <%= product.price %></span>
             <% if session[:order_id] %>
