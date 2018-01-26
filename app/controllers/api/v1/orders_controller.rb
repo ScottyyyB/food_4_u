@@ -13,7 +13,7 @@ class Api::V1::OrdersController < ApplicationController
     order = Order.find(params[:id])
     order.add(@product, @product.price)
     if order.persisted?
-      render json: order, serializer: 
+      render json: { message: "#{@product.name} has been added to the order." }
     end
   end
 
